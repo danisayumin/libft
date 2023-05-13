@@ -6,24 +6,19 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 17:22:56 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/10 21:30:25 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/13 18:15:24 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_isalpha(char *str)
+int	ft_isalpha(char c)
 {
 	int	i;
 
 	i = 0;
-
-	while (str[i] != '\0')
+	if (!(c >= 'a' && c <= 'z'))
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-				return (0);
-		}
-		i++;
+		if (!(c >= 'A' && c <= 'Z'))
+			return (0);
 	}
 	return (1);
 }

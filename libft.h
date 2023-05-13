@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:59:17 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/10 22:46:28 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/13 18:13:47 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include	<unistd.h>
 # include	<stdlib.h>
 
-void	ft_isalpha(char *str);
-int		ft_isdigit(char *str);
+int		ft_isalpha(char c);
+int		ft_isdigit(char c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);

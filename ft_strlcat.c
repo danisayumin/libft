@@ -6,9 +6,11 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 23:18:26 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/11 20:39:52 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/13 18:37:41 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include	"libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

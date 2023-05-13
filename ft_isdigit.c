@@ -6,20 +6,13 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 17:48:31 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/10 21:30:37 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/13 18:11:41 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (0);
-	i++;
-	}
+	if (c < '0' || c > '9')
+		return (0);
 	return (1);
 }
