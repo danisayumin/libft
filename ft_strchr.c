@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 23:18:26 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/11 20:39:52 by dsayumi-         ###   ########.fr       */
+/*   Created: 2023/05/12 20:25:45 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/12 20:33:59 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	l;
+#include "libft.h"
 
-	i = 0;
-	j = 0;
-	k = 0;
-	l = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-		j++;
-	if (dstsize <= i)
-		j = j + dstsize;
-	else
-		j = j + i;
-	while (src[k] != '\0' && i + 1 < dstsize)
+char	*ft_strchr(const char *s, int c)
+{
+	char	ch;
+	char	*str;
+
+	ch = (char)c;
+	str = (char *)s;
+	while (*str)
 	{
-		dst[i] = src[k];
-		i++;
-		k++;
+		if (*str == ch)
+			return (str);
+		str++;
 	}
-	dst[i] = '\0';
-	return (j);
+	if (*str == ch)
+		return (str);
+	return (NULL);
 }

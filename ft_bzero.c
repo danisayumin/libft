@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 23:18:26 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/11 20:39:52 by dsayumi-         ###   ########.fr       */
+/*   Created: 2023/05/11 21:43:07 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/11 22:46:34 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	l;
+#include "libft.h"
 
-	i = 0;
-	j = 0;
-	k = 0;
-	l = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-		j++;
-	if (dstsize <= i)
-		j = j + dstsize;
-	else
-		j = j + i;
-	while (src[k] != '\0' && i + 1 < dstsize)
+void	ft_bzero(void *s, size_t n)
+{
+	char	*p;
+
+	p = s;
+	while (n--)
 	{
-		dst[i] = src[k];
-		i++;
-		k++;
+		*p++ = 0;
 	}
-	dst[i] = '\0';
-	return (j);
 }
