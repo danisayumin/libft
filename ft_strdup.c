@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 21:45:01 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/13 18:36:58 by dsayumi-         ###   ########.fr       */
+/*   Created: 2023/05/12 20:25:45 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/12 20:33:59 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	size_t	len;
-	size_t	i;
+    char *str;
+    size_t i;
 
-	i = 0;
-	len = ft_strlen(src);
-	if (size == 0)
-		return (len);
-	while (src[i] != '\0' && i < size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	return (len);
+    i = 0;
+    str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+    if (!str)
+        return (NULL);
+    while (s[i] != '\0')
+    {
+        str[i] = s[i];
+        i++;
+    }
+    str[i] = '\0';
+    return (str);
 }
-// testa a main

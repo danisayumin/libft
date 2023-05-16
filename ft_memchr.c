@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 21:45:01 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/13 18:36:58 by dsayumi-         ###   ########.fr       */
+/*   Created: 2023/05/11 22:47:03 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/12 19:51:29 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	len;
-	size_t	i;
-
-	i = 0;
-	len = ft_strlen(src);
-	if (size == 0)
-		return (len);
-	while (src[i] != '\0' && i < size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	return (len);
+            unsigned char *str;
+            size_t i;
+    
+            str = (unsigned char *)s;
+            i = 0;
+            while (i < n)
+            {
+                if (str[i] == (unsigned char)c)
+                    return ((void *)&str[i]);
+                i++;
+            }
+            return (NULL);
 }
-// testa a main
+//testa a main
