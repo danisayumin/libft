@@ -35,14 +35,3 @@ int ft_atoi(const char *str)
     }
     return (i * sign);
 }
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    char *str = "   --1234567890";
-    printf("%d\n", ft_atoi(str));
-    printf("%d\n", atoi(str));
-    return (0);
-}
