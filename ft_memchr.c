@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:47:03 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/12 19:51:29 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/18 19:37:35 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-            unsigned char *str;
-            size_t i;
-    
-            str = (unsigned char *)s;
-            i = 0;
-            while (i < n)
-            {
-                if (str[i] == (unsigned char)c)
-                    return ((void *)&str[i]);
-                i++;
-            }
-            return (NULL);
+	unsigned char	*str;
+	size_t			i;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		if (str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
+	i++;
+	}
+	return (NULL);
 }
-//testa a main

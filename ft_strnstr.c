@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 23:36:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/11 21:41:49 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/18 20:25:16 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    
-        size_t i;
-        size_t j;
-    
+        size_t  i;
+        size_t  j;
+
         i = 0;
         if (needle[0] == '\0')
             return ((char *)haystack);
