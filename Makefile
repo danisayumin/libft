@@ -26,8 +26,10 @@ SRC = ft_isalnum.c \
 	ft_memcmp.c \
 	ft_memmove.c \
 	ft_strdup.c \
-	ft_strnstr.c
-
+	ft_strnstr.c \
+	ft_striteri.c \
+	ft_strmapi.c \
+	ft_substr.c
 
 INCLUDE = ./include
 

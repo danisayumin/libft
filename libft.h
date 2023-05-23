@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:59:17 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/13 18:13:47 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/22 20:38:34 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void(*f)(unsigned int, char*));
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
