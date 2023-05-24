@@ -27,6 +27,10 @@ SRC = ft_isalnum.c \
 	ft_memmove.c \
 	ft_strdup.c \
 	ft_strnstr.c \
+	ft_striteri.c \
+	ft_strmapi.c \
+	ft_substr.c
+	ft_strnstr.c \
 	ft_substr.c \
 	ft_strtrim.c \
 	ft_split.c \
