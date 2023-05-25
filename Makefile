@@ -29,7 +29,7 @@ SRC = ft_isalnum.c \
 	ft_strnstr.c \
 	ft_striteri.c \
 	ft_strmapi.c \
-	ft_substr.c
+	ft_substr.c 
 
 INCLUDE = ./include
 

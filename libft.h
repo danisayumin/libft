@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:59:17 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/22 20:38:34 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/25 20:06:41 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include	<unistd.h>
+# include	<stdlib.h>
 # include	<stdlib.h>
 
 int		ft_isalpha(char c);
