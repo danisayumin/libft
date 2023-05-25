@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -33,3 +34,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[len_a] = '\0';
 	return (substr);
 }
+=======
+>>>>>>> 78ceccccf75af42132c38788decd92ff0a3d8cc2
