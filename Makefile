@@ -32,15 +32,11 @@ SRC = ft_isalnum.c \
 	ft_split.c \
 	ft_itoa.c \
 	ft_strmapi.c \
-<<<<<<< HEAD
-	ft_substr.c 
-=======
 	ft_striteri.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
->>>>>>> 78ceccccf75af42132c38788decd92ff0a3d8cc2
 
 INCLUDE = ./include
 
