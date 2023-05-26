@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 19:52:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/13 18:28:46 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/25 21:18:15 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_putstr_fd(char *s, int fd)
 {
     size_t	len;
 
-    if (!s)
-        return ;
     len = ft_strlen(s);
     write(fd, s, len);
 }

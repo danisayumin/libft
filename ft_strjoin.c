@@ -1,35 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 21:01:04 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/25 21:03:25 by dsayumi-         ###   ########.fr       */
+/*   Created: 2023/05/25 20:44:03 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/25 21:52:12 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len_s;
-	size_t	len_a;
-	char	*substr;
+	char	*new_str;
+	size_t	len_s1;
+	size_t	len_s2;
+	size_t	i;
+	size_t	j;
 
-	len_a = len;
-	substr = (char *)malloc((len_a + 1) * sizeof(char));
-	len_s = ft_strlen(s);
-	if (start >= len_s)
+	i = 0;
+	j = 0;
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	else if (start + len_a > len_s)
-		len_a = len_s - start;
-	if (substr == NULL)
+	new_str = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (!new_str)
+		return (NULL);
+	while (i < len_s1)
 	{
-		return (NULL);
+		new_str[i] = len_s1[i];
+		i++;
 	}
-	ft_strlcpy(substr, s + start, len_a);
-	substr[len_a] = '\0';
-	return (substr);
+	while (j < len_s2)
+	{
+		new_str[i + j] = len_s2[j];
+		j++;
+	}
+	new_str[i + j] = '\0';
+	return (new_str);
 }

@@ -1,5 +1,19 @@
 #include   "libft.h"
 
+
+static int	ft_numlen(int n)
+{
+	int	len;
+
+	len = 1;
+	while (n / 10)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
 char *ft_itoa(int n)
 {
     char *str;
