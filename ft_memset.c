@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 19:52:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/13 18:28:46 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/26 22:22:40 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*p;
 	unsigned char	val;
 

@@ -1,5 +1,16 @@
-#include   "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/26 22:15:46 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/26 23:21:47 by dsayumi-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include   "libft.h"
 
 static int	ft_numlen(int n)
 {
@@ -14,31 +25,31 @@ static int	ft_numlen(int n)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char *str;
-    int len;
-    int sign;
-    long long num;
+	char	*str;
+	int		len;
+	int		sign;
+	int		num;
 
-    num = n;
-    sign = 0;
-    if (num < 0)
-    {
-        sign = 1;
-        num *= -1;
-    }
-    len = ft_numlen(num);
-    str = (char *)malloc(sizeof(char) * (len + sign + 1));
-    if (!str)
-        return (NULL);
-    str[len + sign] = '\0';
-    while (len--)
-    {
-        str[len + sign] = num % 10 + '0';
-        num /= 10;
-    }
-    if (sign)
-        str[0] = '-';
-    return (str);
+	num = n;
+	sign = 0;
+	if (num < 0)
+	{
+		sign = 1;
+		num *= -1;
+	}
+	len = ft_numlen(num);
+	str = (char *)malloc(sizeof(char) * (len + sign + 1));
+	if (!str)
+		return (NULL);
+	str[len + sign] = '\0';
+	while (len--)
+	{
+		str[len + sign] = num % 10 + '0';
+		num /= 10;
+	}
+	if (sign)
+		str[0] = '-';
+	return (str);
 }
