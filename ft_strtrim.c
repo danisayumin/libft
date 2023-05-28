@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/26 22:23:14 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/26 22:24:17 by dsayumi-         ###   ########.fr       */
+/*   Created: 2023/05/26 22:59:33 by dsayumi-          #+#    #+#             */
+/*   Updated: 2023/05/27 01:14:23 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	if (n < 0)
+	int	start;
+	int	end;
+
+	start = 0;
+	end = ft_strlen(s1);
+	while(s1[start] && ft_strchr(set, start))
 	{
-		ft_putchar_fd('-', fd);
-		n = -n;
+		start++;
 	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(n % 10 + '0', fd);
+	while (/* condition */)
+	{
+		/* code */
+	}
+	
 }

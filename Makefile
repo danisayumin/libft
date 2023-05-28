@@ -2,9 +2,10 @@ NAME = libft.a
 
 CC = cc
 
-FLAGS = -Wall -Werror -Wextra
+RM = rm -f
 
-SRC = ft_isalnum.c \
+SRCS = \
+	ft_isalnum.c \
 	ft_isalpha.c \
 	ft_isascii.c \
 	ft_isdigit.c \
@@ -31,31 +32,30 @@ SRC = ft_isalnum.c \
 	ft_split.c \
 	ft_itoa.c \
 	ft_strmapi.c \
-	ft_substr.c \
 	ft_striteri.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
 	ft_putnbr_fd.c \
-	ft_calloc.c 
+	ft_calloc.c \
+	ft_strjoin.c
+
+FLAGS = -Wall -Werror -Wextra
 
 INCLUDE = ./include
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-all: libft.a
+all: $(NAME)
 
-libft.a: $(OBJ)
-	ar rcs $@ $^
-
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -I $(INCLUDE) -o $@
-
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) -I$(INCLUDE) -c $(SRCS)
+	ar -rcs $(NAME) $(OBJS)
+ 
 clean:
-	rm -f $(OBJ)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f libft.a
+	$(RM) $(NAME)
 
 re: fclean all
