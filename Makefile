@@ -29,7 +29,6 @@ SRCS = \
 	ft_strdup.c \
 	ft_strnstr.c \
 	ft_substr.c \
-	ft_split.c \
 	ft_itoa.c \
 	ft_strmapi.c \
 	ft_striteri.c \
@@ -38,7 +37,9 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_calloc.c \
-	ft_strjoin.c
+	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_split.c
 
 FLAGS = -Wall -Werror -Wextra
 

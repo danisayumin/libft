@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:47:03 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/12 19:51:29 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/28 18:26:55 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *dest, const void *src, size_t n)
 {
         unsigned char *str1;
         unsigned char *str2;
         size_t i;
-    
+
         str1 = (unsigned char *)dest;
         str2 = (unsigned char *)src;
         i = 0;
@@ -41,4 +41,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
         }
         return (dest);
 }
-//testa a main
