@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 21:43:07 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/26 22:21:05 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/28 21:56:45 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,17 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*ptr;
+	void	*ptr;
+	size_t	result;
 
-	ptr = (char *)malloc(count * size);
+	result = nmemb * size;
+	if (result / nmemb != size)
+	{
+		return (NULL);
+	}
+	ptr = (void *)malloc(result);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, count * size);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

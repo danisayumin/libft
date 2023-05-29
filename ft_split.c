@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 19:52:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/28 20:05:29 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/05/28 23:03:09 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,17 @@
 
 char	**ft_split(char const *s, char c)
 {
+	int		i;
+	char	**sub;
 
+	i = 1;
+	while (*s)
+	{
+		if (*s == c)
+		{
+			i++;
+		}
+		s++;
+	}
+	*sub = (char **)malloc((i + 1) * sizeof(char *));
 }
