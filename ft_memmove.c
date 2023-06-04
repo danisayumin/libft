@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:47:03 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/28 21:29:01 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/04 17:43:31 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	if (str1 < str2)
 	{
-		while (i < n)
-		{
-			str1[i] = str2[i];
-			i++;
-		}
+		while (n--)
+			*str1++ = *str2++;
 	}
 	else
 	{
-		while (n > 0)
-		{
-			str1[n - 1] = str2[n - 1];
-			n--;
-		}
+		while (n--)
+			str1[n] = str2[n];
 	}
 	return (dest);
 }
