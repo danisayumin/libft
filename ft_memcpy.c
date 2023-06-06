@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 22:47:03 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/12 19:51:29 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/05 22:41:56 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 	dst1 = (char *)dst;
 	src1 = (char *)src;
+	if (dst1 == NULL && src1 == NULL)
+	{
+		return (NULL);
+	}
 	while (n--)
 		*dst1++ = *src1++;
 	return (dst);

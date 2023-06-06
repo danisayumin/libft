@@ -6,13 +6,13 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 17:48:31 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/06/02 20:59:47 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/05 22:46:55 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c < '0' || c > '9')
 		return (0);

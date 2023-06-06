@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 19:52:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/06/02 20:52:08 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/05 20:07:42 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,7 @@ char	**ft_split(char const *s, char c)
 {
 	int		word;
 	char	**result;
-	size_t	i;
 
-	i = 0;
 	if (s == NULL)
 		return (NULL);
 	word = ft_count_word(s, c);

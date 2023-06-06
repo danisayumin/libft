@@ -6,34 +6,45 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 23:36:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/26 22:14:49 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/05 22:48:07 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	j = 0;
 	i = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
+	if (little[0] == '\0')
+		return ((char *)big);
 	if (len == 0)
 		return (NULL);
-	while (haystack[i] != '\0' && i < len)
+	while (big[i] != '\0' && i < len)
 	{
-		while ((haystack[i + j] == needle[j]) && (i + j < len))
+		while ((big[i + j] == little[j]) && (i + j < len))
 		{
-			if (needle[j + 1] == '\0')
-			{
-				return ((char *)&haystack[i]);
-				j++;
-			}
+			if (little[j + 1] == '\0')
+				return ((char *)&big[i]);
+			j++;
 		}
-			i++;
+		i++;
+		j = 0;
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+
+// int	main()
+// {
+// 	char big[] = "lorem ipsum dolor sit amet";
+// 	char little[] = "ipsumm";
+// 	size_t len = 30;
+
+// 	char *result = ft_strnstr(big, little, len);
+// 	printf("%s", result);
+// }
