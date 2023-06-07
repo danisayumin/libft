@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 20:44:03 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/26 22:07:11 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/06 19:43:38 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s2;
 	int		i;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2) + 1;
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
 	new_str = malloc(sizeof(char) * (len_s1 + len_s2));
 	if (!new_str)
 		return (NULL);

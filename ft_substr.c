@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 21:01:04 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/05/28 20:42:33 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/06 19:50:59 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	len_s;
 	char	*substr;
 
+	if (s == NULL)
+		return (NULL);
 	len_s = ft_strlen(s);
 	if (!s)
 		return (NULL);
