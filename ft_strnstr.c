@@ -6,7 +6,7 @@
 /*   By: dsayumi- <dsayumi-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 23:36:59 by dsayumi-          #+#    #+#             */
-/*   Updated: 2023/06/05 22:48:07 by dsayumi-         ###   ########.fr       */
+/*   Updated: 2023/06/07 20:58:09 by dsayumi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	char big[] = "lorem ipsum dolor sit amet";
-// 	char little[] = "ipsumm";
-// 	size_t len = 30;
-
-// 	char *result = ft_strnstr(big, little, len);
-// 	printf("%s", result);
-// }

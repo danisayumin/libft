@@ -21,7 +21,6 @@ SRCS = \
 	ft_strlcat.c \
 	ft_bzero.c \
 	ft_memcpy.c \
-	ft_memset.c \
 	ft_atoi.c \
 	ft_memchr.c \
 	ft_memcmp.c \
